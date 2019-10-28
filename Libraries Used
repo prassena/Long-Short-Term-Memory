@@ -1,0 +1,46 @@
+%matplotlib inline
+import warnings
+warnings.filterwarnings("ignore")
+
+
+
+import sqlite3
+import pandas as pd
+import numpy as np
+import nltk
+import string
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+from sklearn.metrics import confusion_matrix
+from sklearn import metrics
+from sklearn.metrics import roc_curve, auc
+from nltk.stem.porter import PorterStemmer
+
+import re
+# Tutorial about Python regular expressions: https://pymotw.com/2/re/
+import string
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from nltk.stem.wordnet import WordNetLemmatizer
+
+from keras.callbacks import ModelCheckpoint
+from tqdm import tqdm
+import os
+
+from sklearn.model_selection import train_test_split
+from keras.layers import Dense,BatchNormalization,Dropout
+from keras.initializers import glorot_normal,he_normal
+
+# Credits: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
+# LSTM for sequence classification in the Amazon dataset
+import numpy
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers.embeddings import Embedding
+from keras.preprocessing import sequence
+# fix random seed for reproducibility
+numpy.random.seed(7)
